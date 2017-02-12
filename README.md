@@ -13,3 +13,5 @@ There are 5 tables:
 * `session` - ամեն անգամ օգտատերերին մեյլ ուղարկելու պահին այս աղյուսակում ավելանում է մեկ տող 
 * `mail_queue` - այս աղյուսակում են պահվում user-ների ցանկը, որոնց պետք է մեյլ ուղարկվի
 * `mail_sent` - mail-ը օգտատերին ուղարկվելուց հետո ավելանում է այս աղյուսակ
+
+[Download db](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
