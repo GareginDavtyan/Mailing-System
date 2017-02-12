@@ -1,5 +1,4 @@
 # Mailing-System
-================
 
 A mailing system with a queueing mechanism. 
 The system has registered users and standard email templates. You can send selected email template to selected contacts. 
