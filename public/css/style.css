@@ -1,0 +1,29 @@
+#added_to_queue{
+    display: none;
+    top: 79px;
+    left: 510px;
+    position: absolute;
+
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+}
+#select_all{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form-inline{
+    margin-bottom: 0px !important;
+}
+
+.panel_title{
+    padding-top: 6px;
+    font-size: 16px;
+}
+
+.inline{
+    display: inline !important;
+}
+
