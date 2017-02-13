@@ -31,9 +31,9 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 - In the **users** page we can choose template, select the users and send them email. The application will add selected users in the queue (in the *mail_queue* table: using *id_user* and *id_template* fileds)։
 - You need to call [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) file with cron every *n* minutes
 	- The file will select all data from *mail_queue* table where *sending* field is equal to zero.
-	- Ընտրելուց հետո ընտրված տողերի *sending* սյան արժեքը դարձնում է 1, որպեսզի զուգահեռաբար աշխատող cron ֆայլը չփորձի երկրորդ անգամ մեյլ ուղարկել միևնույն օգտատերին
+	- after selecting rows the  *sending* field value will be set to 1, որպեսզի զուգահեռաբար աշխատող cron ֆայլը չփորձի երկրորդ անգամ մեյլ ուղարկել միևնույն օգտատերին
 	- օգտատերին մեյլ ուղարկելուց հետո այդ օգտատերի մասին ինֆորմացիան ավելացնում է *mail_sent* աղյուսակի մեջ, որտեղպահվում են միայն ուղարկված մեյլերը։
-	- եթե տողը նորմալ ավելացել է *mail_sent* աղյուսակ, ապա այն ջնջվում է *mail_queue* աղյուսակի։
+	- If the row is successfully inserted into *mail_sent* table, then it will be removed from *mail_queue* table.
 - Փաստորեն *mail_sent* աղյուսակում պահվում են միայն ուղարկված մեյլերը, իսկ *mail_queue* աղյուսակում՝ միայն հերթի մեջ գտնվողները։ Այս երկու աղյուսակների ինֆորմացիան է ցուցադրվում 'Statistic' and 'Queue' էջերում։
 
 
