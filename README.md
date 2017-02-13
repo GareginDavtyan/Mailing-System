@@ -47,11 +47,19 @@ There are 5 tables in the databasa: [View db](https://github.com/GareginDavtyan/
 
 * Download the project.
 * Create databasa and export the [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql) file in your db.
-* Create new folder in your root directory and place both *app* and *public* folders there.
+* Create new folder in your root directory (for example '*mailing*') and place both *app* and *public* folders there.
 
 
 ## Running the tests
 
 * Change your databasa connection settings in *app/connectDB.php*.
+* Setup virtual host to refer to public folder. For example:
+````
+<VirtualHost *:80> 
+    DocumentRoot "your_root_folder/mailing/public"
+    ServerName mailing
+</VirtualHost>
+````
+sorry for this solution. This is temporarily )
 * The *index.php* file inside *public* folder is the home page.
 
