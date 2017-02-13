@@ -47,7 +47,7 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 ## Installing
 
 * Download the project
-* Export the databasa tump file [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
+* Export the [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql) file in your databasa
 * Create new folder in your root directory and place both *app* and *public* folders there
 
 
