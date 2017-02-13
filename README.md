@@ -20,7 +20,7 @@ UI is created with [Bootstrap framework](http://getbootstrap.com/). There are 4 
 There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
 * `user` - contains list of registered users.
 * `template` - contains simple email templates.
-* `session` - այս աղյուսակի օգնությամբ կարողանում ենք տարանջատել տարբեր անգամ ուղարկված մեյլերի խմբերը իրարից։ 
+* `session` - with the help of this table we can separate the mail groups sent different times.
 * `mail_queue` - contains email queue.
 * `mail_sent` - contains sent mail list.
 
@@ -30,12 +30,11 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern was used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
 - In the **users** page we can choose template, select the users and send them email. The application will add selected users in the queue (in the *mail_queue* table: using *id_user* and *id_template* fileds)։
 - You need to call [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) file with cron every *n* minutes
-	- The file will select all data from *mail_queue* table where *sending* field is equal to zero.
-	- after selecting rows the  *sending* field value will be set to 1, որպեսզի զուգահեռաբար աշխատող cron ֆայլը չփորձի երկրորդ անգամ մեյլ ուղարկել միևնույն օգտատերին
-	- օգտատերին մեյլ ուղարկելուց հետո այդ օգտատերի մասին ինֆորմացիան ավելացնում է *mail_sent* աղյուսակի մեջ, որտեղպահվում են միայն ուղարկված մեյլերը։
-	- If the row is successfully inserted into *mail_sent* table, then it will be removed from *mail_queue* table.
-- Փաստորեն *mail_sent* աղյուսակում պահվում են միայն ուղարկված մեյլերը, իսկ *mail_queue* աղյուսակում՝ միայն հերթի մեջ գտնվողները։ Այս երկու աղյուսակների ինֆորմացիան է ցուցադրվում 'Statistic' and 'Queue' էջերում։
-
+	- The file will select all data from '*mail_queue*' table where '*sending*' field is equal to zero.
+	- Аfter selecting rows the '*sending*' field value will be set to 1, to pretend another cron to send message to the same user again.
+	- The information about user, after sending message, inserts into "mail_sent" table, where there are only sent mails.
+	- If the row is successfully inserted into '*mail_sent*' table, then it will be removed from '*mail_queue*' table.
+-So, the *mail_sent* table keeps only sent mails, and the *mail_queue* table only mails in the queue. The information of these two tables are shown on the 'Statistic' and 'Queue' pages.
 
 ## Prerequisites
 
@@ -53,6 +52,6 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 ## Running the tests
 
-* change your databasa connection settings in *app/connectDB.php*.
+* Change your databasa connection settings in *app/connectDB.php*.
 * The *index.php* file inside *public* folder is the home page.
 
