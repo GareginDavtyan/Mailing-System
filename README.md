@@ -27,7 +27,7 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 ## How Application Works
 
-MVC pattern is used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
+[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern is used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
 - **users** էջի միջոցով ընտրում ենք template-ը, user-ներին և սեղմում **Send mail** կոճակը։ Համակարգը այդ նշված օգտատերերի ցանկը կավելացնեի հերթի մեջ՝ (*mail_queue* աղյուսակում՝ *id_user*, *id_template* կոմբինացիայի միջոցով)։
 - [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) ֆայլը անհրաժեշտ է աշխատենել cron-ի միջոցով *n* րոպեն մեկ։ 
 	- Այդ ֆայլը ընտրում է *mail_queue* աղյուսակի բոլոր այն տողերը, որոնք այդ պահին սպասում են հերթում (*WHERE sending=0*): 
