@@ -36,7 +36,7 @@ mailing.prototype.sendEmail = function () {
 
     $.ajax({
         type: 'post',
-        url: '/public/ajax/sendMails/',
+        url: '/ajax/sendMails/',
         dataType: 'text',
         data: data,
         success: function(data){

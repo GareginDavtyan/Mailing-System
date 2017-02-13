@@ -22,10 +22,10 @@
                         <a class="navbar-brand" href="#">Mailing System</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="<?= (isset($data['page']) && $data['page'] == "home") ? "active" : ""; ?>"><a href="/public/home/index/">Users</a></li>
-                        <li class="<?= (isset($data['page']) && $data['page'] == "template") ? "active" : ""; ?>"><a href="/public/home/template/">Templates</a></li>
-                        <li class="<?= (isset($data['page']) && $data['page'] == "statistic") ? "active" : ""; ?>"><a href="/public/state/index/">Statistic</a></li>
-                        <li class="<?= (isset($data['page']) && $data['page'] == "queue") ? "active" : ""; ?>"><a href="/public/state/queue/">Queue</a></li>
+                        <li class="<?= (isset($data['page']) && $data['page'] == "home") ? "active" : ""; ?>"><a href="/home/index/">Users</a></li>
+                        <li class="<?= (isset($data['page']) && $data['page'] == "template") ? "active" : ""; ?>"><a href="/home/template/">Templates</a></li>
+                        <li class="<?= (isset($data['page']) && $data['page'] == "statistic") ? "active" : ""; ?>"><a href="/state/index/">Statistic</a></li>
+                        <li class="<?= (isset($data['page']) && $data['page'] == "queue") ? "active" : ""; ?>"><a href="/state/queue/">Queue</a></li>
                     </ul>
                 </div>
             </nav>

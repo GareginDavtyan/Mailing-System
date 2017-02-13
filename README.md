@@ -17,7 +17,7 @@ UI is created with [Bootstrap framework](http://getbootstrap.com/). There are 4 
 
 ## DB Structure 
 
-There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
+There are 5 tables in the databasa: [View db](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
 * `user` - contains list of registered users.
 * `template` - contains simple email templates.
 * `session` - with the help of this table we can separate the mail groups sent different times.
