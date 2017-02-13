@@ -36,8 +36,22 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 	- եթե տողը նորմալ ավելացել է *mail_sent* աղյուսակ, ապա այն ջնջվում է *mail_queue* աղյուսակի։
 - Փաստորեն *mail_sent* աղյուսակում պահվում են միայն ուղարկված մեյլերը, իսկ *mail_queue* աղյուսակում՝ միայն հերթի մեջ գտնվողները։ Այս երկու աղյուսակների ինֆորմացիան է ցուցադրվում 'Statistic' and 'Queue' էջերում։
 
+
 ## Prerequisites
+
 * Apache
-* PHP 5 >
+* PHP 5>
 * MySql 
+
+
+## Installing
+
+* Download the project
+* Export the databasa tump file [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
+* Create new folder in your root directory and place both *app* and *public* folders there
+
+
+## Running the tests
+
+The *index.php* file inside *public* folder is the home page.
 
