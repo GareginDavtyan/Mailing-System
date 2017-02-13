@@ -56,7 +56,7 @@ There are 5 tables in the databasa: [View db](https://github.com/GareginDavtyan/
 * Setup virtual host to refer to public folder. For example:
 ````
 <VirtualHost *:80> 
-    DocumentRoot "your_root_folder/mailing/public"
+    DocumentRoot "{your_root_dir}/mailing/public"
     ServerName mailing
 </VirtualHost>
 ````
