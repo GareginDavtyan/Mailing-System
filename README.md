@@ -60,6 +60,6 @@ There are 5 tables in the databasa: [View db](https://github.com/GareginDavtyan/
     ServerName mailing
 </VirtualHost>
 ````
-sorry for this solution. This is temporarily :)
+Sorry for this kind of solution. This is temporarily :)
 * The *index.php* file inside *public* folder is the home page.
 
