@@ -37,3 +37,7 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 - Փաստորեն *mail_sent* աղյուսակում պահվում են միայն ուղարկված մեյլերը, իսկ *mail_queue* աղյուսակում՝ միայն հերթի մեջ գտնվողները։ Այս երկու աղյուսակների ինֆորմացիան է ցուցադրվում 'Statistic' and 'Queue' էջերում։
 
 ## Prerequisites
+* Apache
+* PHP 5 >
+* MySql 
+
