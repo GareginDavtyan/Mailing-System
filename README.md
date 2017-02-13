@@ -29,8 +29,8 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern was used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
 - In the **users** page we can choose template, select the users and send them email. The application will add selected users in the queue (in the *mail_queue* table: using *id_user* and *id_template* fileds)։
-- [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) ֆայլը անհրաժեշտ է աշխատենել cron-ի միջոցով *n* րոպեն մեկ։ 
-	- Այդ ֆայլը ընտրում է *mail_queue* աղյուսակի բոլոր այն տողերը, որոնք այդ պահին սպասում են հերթում (*WHERE sending=0*): 
+- You need to call [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) file with cron every *n* minutes
+	- The file will select all data from *mail_queue* table where *sending* field is equal to zero.
 	- Ընտրելուց հետո ընտրված տողերի *sending* սյան արժեքը դարձնում է 1, որպեսզի զուգահեռաբար աշխատող cron ֆայլը չփորձի երկրորդ անգամ մեյլ ուղարկել միևնույն օգտատերին
 	- օգտատերին մեյլ ուղարկելուց հետո այդ օգտատերի մասին ինֆորմացիան ավելացնում է *mail_sent* աղյուսակի մեջ, որտեղպահվում են միայն ուղարկված մեյլերը։
 	- եթե տողը նորմալ ավելացել է *mail_sent* աղյուսակ, ապա այն ջնջվում է *mail_queue* աղյուսակի։
