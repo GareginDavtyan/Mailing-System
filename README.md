@@ -46,13 +46,13 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 ## Installing
 
-* Download the project
-* Export the [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql) file in your databasa
-* Create new folder in your root directory and place both *app* and *public* folders there
+* Download the project.
+* Create databasa and export the [mailing.sql](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql) file in your db.
+* Create new folder in your root directory and place both *app* and *public* folders there.
 
 
 ## Running the tests
 
-* change your databasa connection settings in *app/connectDB.php*
+* change your databasa connection settings in *app/connectDB.php*.
 * The *index.php* file inside *public* folder is the home page.
 
