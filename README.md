@@ -2,8 +2,8 @@
 
 A mailing system with a queueing mechanism. This is a small application created on [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
 The system has registered users and standard email templates. You can send selected email template to selected contacts. 
-There is a dashboard that allows you to follow the process of the queueing (How many emails are in the queue, how many are in the process to send and how many were olredy sent). 
-Also there is a statistic page that shows you whene mails were sent, to whom and how much in total.
+There is a dashboard that allows you to follow the process of the queueing (How many emails are in the queue, how many are in the process to send and how many were alredy sent). 
+Also there is a statistic page that shows you when mails were sent, to whom and how much in total.
 
 
 ## About Interface
