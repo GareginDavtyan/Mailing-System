@@ -8,11 +8,11 @@ Also there is a statistic page that shows you whene mails were sent, to whom and
 
 ## About Interface
 
-ՈՒնի պարզ ինտերֆեյս՝ ստեղծված [bootstrap framework](http://getbootstrap.com/)-ի միջոցով և բաղկացած է 4 էջից։
-* **users** - այս էջում աղյուսակի տեսքով պատկերված է օգտատերեի ցուցակը։
-* **templates** - աղյուսակի տեսքով արտապատկերում է մեյլ ուղարկելու համար նախատեսված template-ները։
-* **statistic** - ստատիստիկ տվյալներ է պարունակում ուղարկված մեյլերի մասին
-* **queue** - աղյուսակի տեսքով պատկերում է, թե քանի մեյլ կա հերթի մեջ, քանիսն է այս պահին ուղարկման փուլում և քանիսն է արդեն ուղարկվել։
+UI is created with [Bootstrap framework](http://getbootstrap.com/). There are 4 pages:
+* **users** - displays users list in table.
+* **templates** - displays email templates list in table.
+* **statistic** - Shows statistics about sent mails.
+* **queue** - Shows how many messages in queue, in sending process, and sent messages.
 
 
 ## DB Structure 
