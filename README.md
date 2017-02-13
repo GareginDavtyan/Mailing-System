@@ -53,5 +53,6 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 ## Running the tests
 
-The *index.php* file inside *public* folder is the home page.
+* change your databasa connection settings in *app/connectDB.php*
+* The *index.php* file inside *public* folder is the home page.
 
