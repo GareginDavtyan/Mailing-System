@@ -27,10 +27,7 @@ There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mail
 
 ## How Application Works
 
-**users** էջի միջոցով կարելի է ընտրել template-ը, նշել թե որ օգտատերերին է անհրաժեշտ մեյլ ուղարկել և սեղմել **Send mail** կոճակը։ 
-
-- Համակարգը այդ նշված օգտատերերի ցանկը կավելացնեի հերթի մեջ՝ (*`mail_queue`* աղյուսակում  *`id_user`*, *`id_template`* կոմբինացիայի միջոցով)։
-
+- **users** էջի միջոցով ընտրում ենք template-ը, user-ներին և սեղմում **Send mail** կոճակը։ Համակարգը այդ նշված օգտատերերի ցանկը կավելացնեի հերթի մեջ՝ (*`mail_queue`* աղյուսակում  *`id_user`*, *`id_template`* կոմբինացիայի միջոցով)։
 - [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) ֆայլը անհրաժեշտ է աշխատենել cron-ի միջոցով n րոպեն մեկ։ 
 	- Այդ ֆայլը ընտրում է *`mail_queue`* աղյուսակի բոլոր այն տողերը, որոնք այդ պահին սպասում են հերթում (**WHERE** *`sending`*=0): 
 	- Ընտրելուց հետո ընտրված տողերի *`sending`* սյան արժեքը դարձնում է 1, որպեսզի զուգահեռաբար աշխատող cron ֆայլը չփորձի երկրորդ անգամ մեյլ ուղարկել միևնույն օգտատերին
