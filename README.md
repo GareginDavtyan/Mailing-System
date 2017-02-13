@@ -52,7 +52,7 @@ There are 5 tables in the databasa: [View db](https://github.com/GareginDavtyan/
 
 ## Running the tests
 
-* Change your databasa connection settings in *app/connectDB.php*.
+* Change your databasa connection settings in [app/connectDB.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/connectDB.php).
 * Setup virtual host to refer to public folder. For example:
 ````
 <VirtualHost *:80> 
