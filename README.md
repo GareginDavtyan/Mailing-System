@@ -12,22 +12,22 @@ UI is created with [Bootstrap framework](http://getbootstrap.com/). There are 4 
 * **users** - displays users list in table.
 * **templates** - displays email templates list in table.
 * **statistic** - Shows statistics about sent mails.
-* **queue** - Shows how many messages in queue, in sending process, and sent messages.
+* **queue** - Shows how many messages in queue, in sending process, and how many are sent.
 
 
 ## DB Structure 
 
 There are 5 tables in databasa: [View db](https://github.com/GareginDavtyan/Mailing-System/blob/master/mailing.sql)
 * `user` - contains list of registered users.
-* `template` - Simple email templates.
+* `template` - contains simple email templates.
 * `session` - այս աղյուսակի օգնությամբ կարողանում ենք տարանջատել տարբեր անգամ ուղարկված մեյլերի խմբերը իրարից։ 
-* `mail_queue` - այս աղյուսակում են պահվում user-ների ցանկը, որոնց պետք է մեյլ ուղարկվի։
-* `mail_sent` - mail-ը օգտատերին ուղարկվելուց հետո ավելանում է այս աղյուսակ։
+* `mail_queue` - contains email queue.
+* `mail_sent` - contains sent mail list.
 
 
 ## How Application Works
 
-[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern is used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
+[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern was used to create this application. There are two folders: **app** and **public**. The **public** folder contains all public files: css, js, etc. The **app** folder contains logic of application.
 - **users** էջի միջոցով ընտրում ենք template-ը, user-ներին և սեղմում **Send mail** կոճակը։ Համակարգը այդ նշված օգտատերերի ցանկը կավելացնեի հերթի մեջ՝ (*mail_queue* աղյուսակում՝ *id_user*, *id_template* կոմբինացիայի միջոցով)։
 - [app/cron/sendMailsFromQueue.php](https://github.com/GareginDavtyan/Mailing-System/blob/master/app/cron/sendMailsFromQueue.php) ֆայլը անհրաժեշտ է աշխատենել cron-ի միջոցով *n* րոպեն մեկ։ 
 	- Այդ ֆայլը ընտրում է *mail_queue* աղյուսակի բոլոր այն տողերը, որոնք այդ պահին սպասում են հերթում (*WHERE sending=0*): 
